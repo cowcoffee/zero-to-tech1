@@ -5,11 +5,11 @@
   box-shadow: var(--shadow);
 }
 
-/* 卡片的初始状态：藏起来 + 微微下沉，等动画把它们抬起来。
-   cards.js 在浏览器加载完后用 anime.js 给它们做 stagger 入场。 */
+/* 默认显示内容；cards.js 会在入场动画中设置透明度和位移。
+   即使脚本或 CDN 加载失败，卡片也仍然可见。 */
 .card {
-  opacity: 0;
-  transform: translateY(24px);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-kicker {
